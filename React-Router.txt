@@ -1,0 +1,46 @@
+**React Router**
+
+1)intall => npm install react-router-dom
+2)import {BrowserRouter, Route, Switch} from 'react-router-dom';
+
+************************************************
+A)Everything that gets rendered will need to go inside the <BrowserRouter> element, so wrap your App in those first.
+
+			ReactDOM.render(
+ 			   <BrowserRouter>
+       			      <App />
+ 			   </BrowserRouter>, 
+		    document.getElementById('root')
+			)
+
+
+B)Next, in your App component, add the Switch element (open and closing tags). These ensure that only one component is rendered at a time
+
+			   <Switch>
+                
+           		   </Switch>
+
+c)It's now time to add your <Route> tags. These are the links between the components and should be placed inside the <Switch> tags.
+
+		    <Switch>
+               
+		 <Route path="/" component={Home} exact />
+                <Route path="/about" component={About} />
+                <Route path="/shop" component={Shop} />
+                
+		   </Switch>
+
+D)NAvBar => Now add clickable links to the site,
+		
+			function Navbar() {
+  		  return (
+		    <div>
+     			 <Link to="/">Home </Link>
+   			   <Link to="/about">About Us </Link>
+			      <Link to="/shop">Shop Now </Link>
+   		     </div>
+  );
+};
+
+
+
