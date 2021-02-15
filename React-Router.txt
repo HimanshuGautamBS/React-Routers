@@ -24,7 +24,7 @@ c)It's now time to add your <Route> tags. These are the links between the compon
 
 		    <Switch>
                
-		 <Route path="/" component={Home} exact />
+		 <Route exact path="/" component={Home} exact />
                 <Route path="/about" component={About} />
                 <Route path="/shop" component={Shop} />
                 
